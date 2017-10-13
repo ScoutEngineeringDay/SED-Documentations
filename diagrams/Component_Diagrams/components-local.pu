@@ -1,0 +1,18 @@
+@startuml
+package vagrant_VM{
+    Node SED_docker{
+        folder SED_django_project{
+            component SED_app_MITRE
+            component SED_app_Quantico
+        } 
+    }
+    Node mysql_docker{
+        Database Mysql_DB
+    }
+    Node Hashi_vault_docker
+
+    SED_django_project --> Mysql_DB: collect data for both applications
+    SED_django_project --> Hashi_vault_docker: get encrypted environmental variables
+
+}
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+Actor scout
+participant mobile_device
+participant website
+Database Mysql_DB
+
+scout->website: Login
+website-->mobile_device: Store Login into cache
+scout->mobile_device: Use QR app to scan QR
+mobile_device->website: Convert QR to URL
+website->mysql_DB: query scout information
+mysql_DB->website: return data
+website->scout: Display Scout information
+@enduml

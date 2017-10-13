@@ -1,0 +1,27 @@
+@startuml
+Class Scouts{
+    String Name
+}
+
+Class Session{
+    
+}
+Class Workshop{
+
+}
+Class Course{
+
+}
+Class Instructor{
+
+}
+Class Volunteer{
+
+}
+Scouts--|>Session
+Session--|>Workshop
+Workshop--|>Course
+Workshop--|>Instructor
+Volunteer--|>Workshop
+Volunteer--|>Event
+@enduml

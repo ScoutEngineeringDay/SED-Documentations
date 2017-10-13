@@ -1,0 +1,22 @@
+@startuml
+cloud AWS_Terraforms_EC2{
+    Node SED_docker{
+        folder SED_django_project{
+            component SED_app_MITRE
+            component SED_app_Quantico
+        } 
+    }
+    Node mysql_docker{
+        Database Mysql_DB
+    }
+    Node Hashi_vault_docker
+    Node s3_bucket
+
+    SED_django_project --> Mysql_DB: collect data for both applications
+    SED_app_MITRE --> s3_bucket: collect static images
+    SED_app_Quantico --> s3_bucket: collect static images
+    SED_django_project --> Hashi_vault_docker: get encrypted environmental variables
+}
+
+
+@enduml

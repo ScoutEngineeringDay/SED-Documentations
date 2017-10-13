@@ -1,0 +1,14 @@
+@startuml
+Actor admin
+participant mobile_device
+participant website
+Database Mysql_DB
+
+admin->website: Login
+website-->mobile_device: Store Login into cache
+admin->mobile_device: Use QR app to scan QR
+mobile_device->website: Convert QR to URL
+website->mysql_DB: query admin information
+mysql_DB->website: return data
+website->admin: Display admin information
+@enduml
