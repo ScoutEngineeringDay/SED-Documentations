@@ -24,8 +24,42 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown="md/0-introduction.md"
+					data-separator="break"
+					data-separator-vertical="vert"
+					data-separator-notes="Note:"
+					data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="md/1-team.md"
+					data-separator="break"
+					data-separator-vertical="vert"
+					data-separator-notes="Note:"
+					data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="md/2-technologies.md"
+					data-separator="break"
+					data-separator-vertical="vert"
+					data-separator-notes="Note:"
+					data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="md/3-website.md"
+					data-separator="break"
+					data-separator-vertical="vert"
+					data-separator-notes="Note:"
+					data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="md/4-civic.md"
+					data-separator="break"
+					data-separator-vertical="vert"
+					data-separator-notes="Note:"
+					data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="md/5-previous-year.md"
+					data-separator="break"
+					data-separator-vertical="vert"
+					data-separator-notes="Note:"
+					data-charset="iso-8859-15">
+				</section>
 			</div>
 		</div>
 
@@ -42,10 +76,10 @@
 					src: "chalkboard.json",
 				},
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/markdown/marked.js' },
+					{ src: '../plugin/markdown/markdown.js' },
+					{ src: '../plugin/notes/notes.js', async: true },
+					{ src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'node_modules/reveal.js-menu/menu.js' }
 				],
 				keyboard: {
